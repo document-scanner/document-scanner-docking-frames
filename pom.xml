@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>richtercloud</groupId>
+        <artifactId>document-scanner-aggregator</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <artifactId>document-scanner-docking-frames</artifactId>
+    <packaging>jar</packaging>
+    <dependencies>
+        <dependency>
+            <groupId>org.dockingframes</groupId>
+            <artifactId>docking-frames-common</artifactId>
+            <version>1.1.2-P18a</version>
+            <type>jar</type>
+        </dependency>
+        <!--<dependency>
+            <groupId>org.dockingframes</groupId>
+            <artifactId>docking-frames-common</artifactId>
+            <version>1.1.2-P18a</version><! 1.1.2-SNAPSHOT pointing to 1.1.2p16a-3-gf1bddbd causes
+            java.lang.IllegalStateException: During an operation the framework attempted to acquire the same lock twice. There are two possible explanations:
+1. In a multi-threaded application one or both operations are not executed in the EventDispatchThread, or
+2. The operations are calling each other, which should not happen. >
+            <type>jar</type>
+        </dependency>-->
+        <dependency>
+            <groupId>richtercloud</groupId>
+            <artifactId>document-scanner</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <type>jar</type>
+        </dependency>
+    </dependencies>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>2.17</version>
+                <executions>
+                    <execution>
+                        <id>check_style</id>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                        <phase>validate</phase>
+                        <configuration>
+                            <includeTestSourceDirectory>true</includeTestSourceDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+                <configuration>
+                    <configLocation>check_style.xml</configLocation>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
