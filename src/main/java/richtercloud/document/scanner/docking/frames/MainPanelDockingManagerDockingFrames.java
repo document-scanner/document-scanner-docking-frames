@@ -27,12 +27,12 @@ import java.util.Map;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
 import org.apache.commons.lang3.tuple.Pair;
-import richtercloud.document.scanner.gui.DocumentScanner;
-import richtercloud.document.scanner.gui.EntityPanel;
-import richtercloud.document.scanner.gui.MainPanel;
-import richtercloud.document.scanner.gui.MainPanelDockingManager;
-import richtercloud.document.scanner.gui.OCRPanel;
-import richtercloud.document.scanner.gui.OCRSelectComponent;
+import richtercloud.document.scanner.ifaces.Constants;
+import richtercloud.document.scanner.ifaces.EntityPanel;
+import richtercloud.document.scanner.ifaces.MainPanel;
+import richtercloud.document.scanner.ifaces.MainPanelDockingManager;
+import richtercloud.document.scanner.ifaces.OCRPanel;
+import richtercloud.document.scanner.ifaces.OCRSelectComponent;
 
 /**
  *
@@ -103,7 +103,7 @@ public class MainPanelDockingManagerDockingFrames implements MainPanelDockingMan
             aNewDockable = new DefaultMultipleCDockable(null,
                     aNew.getoCRSelectPanelPanel().getDocumentFile() != null
                             ? aNew.getoCRSelectPanelPanel().getDocumentFile().getName()
-                            : DocumentScanner.UNSAVED_NAME,
+                            : Constants.UNSAVED_NAME,
                     aNew);
             dockableMap.put(aNew, aNewDockable);
             componentMap.put(aNewDockable, aNew);
