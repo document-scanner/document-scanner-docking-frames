@@ -206,4 +206,9 @@ public class MainPanelDockingManagerDockingFrames implements MainPanelDockingMan
             mainPanel.validate(); //@TODO necessary
         }
     };
+
+    @Override
+    public void removeDocument(OCRSelectComponent oCRSelectComponent) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
