@@ -12,7 +12,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package richtercloud.document.scanner.docking.frames;
+package de.richtercloud.document.scanner.docking.frames;
 
 import bibliothek.gui.dock.common.CControl;
 import bibliothek.gui.dock.common.CLocation;
@@ -27,12 +27,12 @@ import java.util.Map;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
 import org.apache.commons.lang3.tuple.Pair;
-import richtercloud.document.scanner.ifaces.Constants;
-import richtercloud.document.scanner.ifaces.EntityPanel;
-import richtercloud.document.scanner.ifaces.MainPanel;
-import richtercloud.document.scanner.ifaces.MainPanelDockingManager;
-import richtercloud.document.scanner.ifaces.OCRPanel;
-import richtercloud.document.scanner.ifaces.OCRSelectComponent;
+import de.richtercloud.document.scanner.ifaces.Constants;
+import de.richtercloud.document.scanner.ifaces.EntityPanel;
+import de.richtercloud.document.scanner.ifaces.MainPanel;
+import de.richtercloud.document.scanner.ifaces.MainPanelDockingManager;
+import de.richtercloud.document.scanner.ifaces.OCRPanel;
+import de.richtercloud.document.scanner.ifaces.OCRSelectComponent;
 
 /**
  *
